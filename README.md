@@ -23,7 +23,7 @@ aws s3 cp ./site s3://2022-my-static-bucket --recursive
 aws s3 website s3://2022-my-static-bucket/ --index-document index.html
 ```
 
-[Visit site](https://2022-my-static-bucket.s3.amazonaws.com)
+[Visit site](http://2022-my-static-bucket.s3-website-us-east-1.amazonaws.com/)
 
 ## Cloudfront setup
 
