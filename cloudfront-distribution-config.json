@@ -1,0 +1,35 @@
+{
+  "CallerReference": "cloudfront-distribution-config",
+  "DefaultRootObject": "index.html",
+  "Comment": "put your static site on cloudfront using aws cli",
+  "Enabled": true,
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "my-static-site-cloudfront-distribution",
+        "DomainName": "2022-my-static-bucket.s3.amazonaws.com",
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "my-static-site-cloudfront-distribution",
+    "ViewerProtocolPolicy": "allow-all",
+    "MinTTL": 0,
+    "ForwardedValues": {
+      "QueryString": true,
+      "Cookies": {
+        "Forward": "all"
+      },
+      "Headers": {
+        "Quantity": 0
+      },
+      "QueryStringCacheKeys": {
+        "Quantity": 0
+      }
+    }
+  }
+}

@@ -9,6 +9,9 @@ See this article in order to
 
 ## Amazon s3 setup
 
+Create the bucket is easy, but you need to provide a policy file to grant proper
+access to it: [s3-bucket-policy.json](s3-bucket-policy.json)
+
 ```bash
 # Create the bucket
 aws s3api create-bucket --bucket 2022-my-static-bucket
@@ -31,3 +34,12 @@ At first, it was not working. But a simple email to amazon support enabled my
 account to use cloudfront
 
 Set up a https and dns name for that site.
+
+Issue the following command:
+
+```bash
+aws cloudfront create-distribution --distribution-config file://cloudfront-distribution-config.json
+```
+
+Make sure to point out the correct s3 bucket address inside the
+[distribution config file](cloudfront-distribution-config.json)
