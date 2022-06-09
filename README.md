@@ -101,7 +101,7 @@ aws cloudfront delete-distribution --id EQ0X2UA6ANOT --if-match E264VFWPIZFXUS
 aws cloudfront delete-distribution --id E3KHKVGN8LU0JH --if-match E2ZX4G05HCUMJ6
 ```
 
-For course, there is always the option to delete distributions
+Of course, there is always the option to delete distributions
 [using the web console](https://console.aws.amazon.com/cloudfront/v3/home?skipRegion=true#/distributions).
 
 ### Delete de bucket
